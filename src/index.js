@@ -5,9 +5,11 @@ import Timelineform from "./component/Timelineform";
 
 const App = () => {
   const [countryname,setCountryname]=useState("");
+  
   const valuePassing = (country) => {
     setCountryname(country);
   };
+ 
   return (
   <div>
     <div style={{ backgroundColor: 'grey', }}>
