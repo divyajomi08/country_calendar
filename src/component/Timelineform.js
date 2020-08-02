@@ -9,7 +9,7 @@ const Timelineform = (props) => {
   const colour = ['rgb(33, 150, 243)', 'rgb(0, 150, 0)'];
 
   const handleget = async()=>{
-    const festival =await axios.get("http://localhost:4063/festival");
+    const festival =await axios.get("https://infinite-coast-24823.herokuapp.com/festival");
     setData(festival.data);
     console.log(festival);
   };
