@@ -3,15 +3,17 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import axios from "axios";
 
+
 const Timelineform = (props) => {
   const countryname = props.country;
   const [festival,setData]=useState([]);
   const colour = ['rgb(33, 150, 243)', 'rgb(0, 150, 0)'];
-
-  const handleget = async()=>{
-    const festival =await axios.get("https://infinite-coast-24823.herokuapp.com/festival");
+  
+  const handleget = async()=>{    
+    const festival =await axios.get(process.env.REACT_APP_URL_GET);
     setData(festival.data);
     console.log(festival);
+  
   };
   useEffect(()=>{handleget()},[]);
   const filtervalue = festival.filter((item) =>(item._country === countryname));

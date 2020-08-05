@@ -8,14 +8,13 @@ const App = () => {
   
   const valuePassing = (country) => {
     setCountryname(country);
+    console.log(country);
   };
  
   return (
-  <div>
-    <div style={{ backgroundColor: 'grey', }}>
-      <Search searchword={valuePassing} />
-    </div>
-    <Timelineform country={countryname} />
+  <div className="ui container" > <br></br><br></br>  
+      <Search searchword={valuePassing} />    
+      <Timelineform country={countryname} />
   </div>);
 };
 
